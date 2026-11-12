@@ -525,7 +525,7 @@ int test_plugin(const char*filename) {
   if(!vstmain)return printf("'%s' was not loaded\n", filename);
   AEffect*effect = vstmain(&dispatcher);
   printf("instantiated effect %p\n", effect);
-  snprintf(effectname, 1024, filename);
+  snprintf(effectname, sizeof(effectname), "%s", filename);
   if(!effect)return printf("unable to instantiate plugin from '%s'\n", filename);
   print_aeffect(effect);
   //dump_data(filename, effect, 160);

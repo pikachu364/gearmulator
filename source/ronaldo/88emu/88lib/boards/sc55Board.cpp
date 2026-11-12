@@ -57,7 +57,7 @@ namespace emu88Lib
 
 		// The original has three 1 MiB mask ROMs; the mkII has a 2 MiB and a
 		// 1 MiB part. Profile data maps each physical ROM to its GP chip select.
-		for(uint8_t slot = 0; slot < m_roms.waveRom.size(); ++slot)
+		for(size_t slot = 0; slot < m_roms.waveRom.size(); ++slot)
 		{
 			if(m_roms.waveRom[slot].empty())
 				continue;

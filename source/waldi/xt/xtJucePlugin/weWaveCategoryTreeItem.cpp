@@ -126,9 +126,8 @@ namespace xtJucePlugin
 
 	void WaveCategoryTreeItem::addItems(const uint16_t _first, const uint16_t _count)
 	{
-		const uint32_t end = static_cast<uint32_t>(_first) + _count;
-		for (uint32_t i = _first; i < end; ++i)
-			addItem(static_cast<uint16_t>(i));
+		for(uint16_t i=_first; i<_first+_count; ++i)
+			addItem(i);
 
 		getNode()->setOpened(true);
 	}
